@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Almanaque do Peru — Guia de Primeira Viagem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Special+Elite&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --terracota: #8B3A1F;
+    --ocre: #C97A3A;
+    --indigo: #1F3A5F;
+    --areia: #F4E9D8;
+    --pergaminho: #EDDFC4;
+    --escuro: #2A1810;
+    --dourado: #B8893D;
+    --verde-vale: #4A6B3A;
+    --vermelho-fita: #A03020;
+    --tinta: #2A1810;
+    --grao: rgba(139, 58, 31, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--tinta);
+    background: var(--pergaminho);
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(139, 58, 31, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(31, 58, 95, 0.05) 0%, transparent 40%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' /%3E%3CfeColorMatrix values='0 0 0 0 0.55 0 0 0 0 0.35 0 0 0 0 0.2 0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+  }
+
+  /* ===== TIPOGRAFIA ===== */
+  .display-font { font-family: 'DM Serif Display', serif; }
+  .typewriter { font-family: 'Special Elite', monospace; }
+  .sans { font-family: 'Karla', sans-serif; }
+
+  h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; }
+
+  /* ===== CAPA ===== */
+  .cover {
+    min-height: 100vh;
+    background:
+      linear-gradient(180deg, rgba(42, 24, 16, 0.65) 0%, rgba(139, 58, 31, 0.55) 50%, rgba(31, 58, 95, 0.7) 100%),
+      url('https://images.unsplash.com/photo-1526392060635-9d6019884377?w=1600&q=80') center/cover;
+    color: var(--areia);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 30px;
+    border: 2px double rgba(244, 233, 216, 0.4);
+    pointer-events: none;
+  }
+
+  .cover-eyebrow {
+    font-family: 'Karla', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.6em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    opacity: 0.85;
+  }
+
+  .cover-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(80px, 18vw, 220px);
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  }
+
+  .cover-title em {
+    font-style: italic;
+    color: var(--dourado);
+  }
+
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(20px, 3vw, 30px);
+    margin: 30px 0;
+    max-width: 600px;
+    line-height: 1.4;
+  }
+
+  .cover-rule {
+    width: 80px;
+    height: 1px;
+    background: var(--dourado);
+    margin: 30px auto;
+  }
+
+  .cover-meta {
+    font-family: 'Karla', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-top: 40px;
+  }
+
+  .cover-meta-row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  .cover-glyph {
+    font-size: 40px;
+    margin: 20px 0 10px;
+    color: var(--dourado);
+  }
+
+  /* ===== LAYOUT GERAL ===== */
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 30px;
+  }
+
+  section {
+    margin-bottom: 100px;
+    scroll-margin-top: 30px;
+  }
+
+  /* ===== CABEÇALHO DE SEÇÃO ===== */
+  .section-num {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px;
+    color: var(--terracota);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .section-num::before, .section-num::after {
+    content: '';
+    flex: 0 0 40px;
+    height: 1px;
+    background: var(--terracota);
+    opacity: 0.5;
+  }
+
+  .section-num::after { flex: 1; }
+
+  h2.section-title {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1;
+    color: var(--terracota);
+    margin-bottom: 30px;
+    letter-spacing: -0.02em;
+  }
+
+  h2.section-title em {
+    color: var(--indigo);
+    font-style: italic;
+  }
+
+  .section-intro {
+    font-size: 22px;
+    font-style: italic;
+    color: var(--escuro);
+    max-width: 750px;
+    margin-bottom: 60px;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+
+  /* ===== SUMÁRIO ===== */
+  .toc {
+    background: var(--areia);
+    border: 1px solid rgba(139, 58, 31, 0.2);
+    padding: 50px 60px;
+    margin: 60px auto 0;
+    max-width: 720px;
+    box-shadow: 0 2px 20px rgba(42, 24, 16, 0.08);
+    position: relative;
+  }
+
+  .toc::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(139, 58, 31, 0.15);
+    pointer-events: none;
+  }
+
+  .toc-title {
+    text-align: center;
+    font-size: 36px;
+    color: var(--terracota);
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+
+  .toc-sub {
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--ocre);
+    margin-bottom: 35px;
+  }
+
+  .toc-list { list-style: none; }
+
+  .toc-list li {
+    display: flex;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px dotted rgba(139, 58, 31, 0.3);
+  }
+
+  .toc-list li:last-child { border-bottom: none; }
+
+  .toc-num {
+    font-family: 'Special Elite', monospace;
+    font-size: 13px;
+    color: var(--terracota);
+    flex: 0 0 50px;
+    font-weight: bold;
+  }
+
+  .toc-list a {
+    color: var(--escuro);
+    text-decoration: none;
+    flex: 1;
+    font-size: 19px;
+    transition: color 0.2s;
+  }
+
+  .toc-list a:hover { color: var(--terracota); }
+
+  .toc-dots {
+    flex: 1;
+    border-bottom: 1px dotted rgba(139, 58, 31, 0.4);
+    margin: 0 15px 6px;
+  }
+
+  /* ===== BLOCOS DE TEXTO ===== */
+  p { margin-bottom: 18px; }
+
+  p.first-paragraph::first-letter {
+    font-family: 'DM Serif Display', serif;
+    font-size: 80px;
+    line-height: 0.85;
+    float: left;
+    margin: 8px 12px -8px 0;
+    color: var(--terracota);
+    font-style: italic;
+  }
+
+  h3 {
+    font-size: 32px;
+    color: var(--indigo);
+    margin: 50px 0 20px;
+    font-style: italic;
+  }
+
+  h4 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--terracota);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin: 35px 0 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--terracota);
+  }
+
+  /* ===== LISTAS ===== */
+  ul.fancy {
+    list-style: none;
+    margin: 20px 0 25px;
+  }
+
+  ul.fancy li {
+    padding-left: 30px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  ul.fancy li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--ocre);
+    font-size: 16px;
+    top: 2px;
+  }
+
+  ol.fancy {
+    list-style: none;
+    counter-reset: item;
+    margin: 20px 0 25px;
+  }
+
+  ol.fancy li {
+    padding-left: 50px;
+    margin-bottom: 16px;
+    position: relative;
+    counter-increment: item;
+  }
+
+  ol.fancy li::before {
+    content: counter(item, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-family: 'DM Serif Display', serif;
+    color: var(--terracota);
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  /* ===== CALLOUTS / CAIXAS ===== */
+  .callout {
+    margin: 35px 0;
+    padding: 30px 35px;
+    background: var(--areia);
+    border-left: 4px solid var(--terracota);
+    position: relative;
+  }
+
+  .callout.gold { border-left-color: var(--dourado); }
+  .callout.indigo { border-left-color: var(--indigo); }
+  .callout.green { border-left-color: var(--verde-vale); }
+
+  .callout-label {
+    font-family: 'Special Elite', monospace;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--terracota);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .callout.gold .callout-label { color: var(--dourado); }
+  .callout.indigo .callout-label { color: var(--indigo); }
+  .callout.green .callout-label { color: var(--verde-vale); }
+
+  .callout-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: var(--escuro);
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  .callout p { font-size: 18px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* ===== CARDS DE LUGARES ===== */
+  .place-card {
+    margin: 60px 0;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(139, 58, 31, 0.15);
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(42, 24, 16, 0.08);
+  }
+
+  .place-hero {
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 1px solid rgba(139, 58, 31, 0.2);
+  }
+
+  .place-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(42, 24, 16, 0.3) 100%);
+  }
+
+  .place-hero-label {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: var(--areia);
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 36px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    z-index: 1;
+  }
+
+  .place-body {
+    padding: 40px 50px;
+  }
+
+  .place-name {
+    font-size: 44px;
+    color: var(--terracota);
+    margin-bottom: 5px;
+    line-height: 1;
+  }
+
+  .place-tagline {
+    font-style: italic;
+    color: var(--ocre);
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  /* ===== TABELA DE INFO ===== */
+  .info-table {
+    margin: 25px 0 35px;
+    border-top: 2px solid var(--terracota);
+    border-bottom: 2px solid var(--terracota);
+  }
+
+  .info-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    padding: 12px 0;
+    border-bottom: 1px dotted rgba(139, 58, 31, 0.25);
+    font-size: 17px;
+  }
+
+  .info-row:last-child { border-bottom: none; }
+
+  .info-key {
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--terracota);
+    padding-top: 4px;
+  }
+
+  /* ===== TIMELINE / DIA A DIA ===== */
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+    margin: 40px 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, var(--terracota) 0%, var(--dourado) 50%, var(--indigo) 100%);
+  }
+
+  .day {
+    position: relative;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+  }
+
+  .day::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--areia);
+    border: 3px solid var(--terracota);
+    z-index: 1;
+  }
+
+  .day-num {
+    font-family: 'Special Elite', monospace;
+    font-size: 11px;
+    color: var(--terracota);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .day-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--escuro);
+    margin-bottom: 12px;
+    line-height: 1.15;
+  }
+
+  .day-date {
+    font-style: italic;
+    color: var(--ocre);
+  }
+
+  /* ===== VOCABULÁRIO ===== */
+  .vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 17px;
+  }
+
+  .vocab-table thead tr {
+    background: var(--terracota);
+    color: var(--areia);
+  }
+
+  .vocab-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-family: 'Karla', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+  }
+
+  .vocab-table td {
+    padding: 12px 16px;
+    border-bottom: 1px dotted rgba(139, 58, 31, 0.25);
+    vertical-align: top;
+  }
+
+  .vocab-table tbody tr:nth-child(even) {
+    background: rgba(244, 233, 216, 0.5);
+  }
+
+  .vocab-table .word {
+    font-style: italic;
+    color: var(--terracota);
+    font-weight: 500;
+  }
+
+  .vocab-table .ctx {
+    font-size: 15px;
+    color: var(--escuro);
+    opacity: 0.75;
+  }
+
+  /* ===== ALTITUDE GRAPHIC ===== */
+  .altitude-chart {
+    margin: 40px 0;
+    padding: 40px 30px 50px;
+    background: linear-gradient(180deg, rgba(31, 58, 95, 0.05) 0%, var(--areia) 100%);
+    border: 1px solid rgba(31, 58, 95, 0.2);
+    overflow: hidden;
+  }
+
+  .altitude-chart h4 { margin-top: 0; border: none; }
+
+  .altitude-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 280px;
+    padding: 0 10px;
+    border-bottom: 2px solid var(--escuro);
+    margin-bottom: 8px;
+  }
+
+  .alt-bar {
+    flex: 1;
+    background: linear-gradient(180deg, var(--terracota) 0%, var(--ocre) 100%);
+    position: relative;
+    min-width: 40px;
+    transition: filter 0.3s;
+  }
+
+  .alt-bar:hover { filter: brightness(1.15); }
+
+  .alt-value {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Special Elite', monospace;
+    font-size: 11px;
+    color: var(--escuro);
+    white-space: nowrap;
+  }
+
+  .alt-label {
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-25deg);
+    transform-origin: left top;
+    font-family: 'Karla', sans-serif;
+    font-size: 11px;
+    color: var(--escuro);
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  /* Cores escalonadas */
+  .alt-bar.lima { background: linear-gradient(180deg, #6B9DC4 0%, #8FB5D0 100%); }
+  .alt-bar.machu { background: linear-gradient(180deg, #4A6B3A 0%, #6B8A55 100%); }
+  .alt-bar.olla { background: linear-gradient(180deg, #4A6B3A 0%, #6B8A55 100%); }
+  .alt-bar.vale { background: linear-gradient(180deg, #4A6B3A 0%, #6B8A55 100%); }
+  .alt-bar.cusco { background: linear-gradient(180deg, var(--ocre) 0%, #DCA170 100%); }
+  .alt-bar.humantay { background: linear-gradient(180deg, var(--terracota) 0%, var(--ocre) 100%); }
+  .alt-bar.cores { background: linear-gradient(180deg, var(--vermelho-fita) 0%, var(--terracota) 100%); }
+
+  /* ===== CHECKLIST ===== */
+  .checklist {
+    list-style: none;
+    margin: 20px 0 30px;
+    columns: 2;
+    column-gap: 40px;
+  }
+
+  .checklist li {
+    padding: 8px 0 8px 32px;
+    position: relative;
+    font-size: 17px;
+    break-inside: avoid;
+  }
+
+  .checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--terracota);
+    background: white;
+  }
+
+  /* ===== PRATOS / GRID DE COMIDA ===== */
+  .dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+  }
+
+  .dish-card {
+    background: var(--areia);
+    padding: 25px 28px;
+    border-top: 3px solid var(--ocre);
+    box-shadow: 0 2px 10px rgba(42, 24, 16, 0.06);
+    position: relative;
+  }
+
+  .dish-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--terracota);
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+
+  .dish-card p {
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* ===== DIVISORES ORNAMENTAIS ===== */
+  .ornament {
+    text-align: center;
+    margin: 60px 0;
+    color: var(--ocre);
+    font-size: 24px;
+    letter-spacing: 0.5em;
+  }
+
+  .ornament::before, .ornament::after {
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background: var(--ocre);
+    vertical-align: middle;
+    margin: 0 20px;
+    opacity: 0.5;
+  }
+
+  /* ===== MARGEM / NOTA LATERAL ===== */
+  .margin-note {
+    background: transparent;
+    border-top: 1px dashed var(--ocre);
+    border-bottom: 1px dashed var(--ocre);
+    padding: 20px 0;
+    margin: 30px 0;
+    font-style: italic;
+    color: var(--escuro);
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .margin-note .label {
+    display: block;
+    font-family: 'Special Elite', monospace;
+    font-style: normal;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--ocre);
+    margin-bottom: 8px;
+  }
+
+  /* ===== IMAGEM EM SEÇÃO ===== */
+  .section-image {
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    margin: 40px 0;
+    border-radius: 0;
+    box-shadow: 0 8px 30px rgba(42, 24, 16, 0.15);
+    position: relative;
+  }
+
+  .section-image-cap {
+    position: absolute;
+    bottom: -28px;
+    right: 15px;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ocre);
+  }
+
+  /* ===== HIGHLIGHT KEYWORDS ===== */
+  strong {
+    color: var(--terracota);
+    font-weight: 600;
+  }
+
+  em.highlight {
+    background: linear-gradient(180deg, transparent 60%, rgba(184, 137, 61, 0.3) 60%);
+    font-style: normal;
+    padding: 0 2px;
+  }
+
+  /* ===== FINAL ===== */
+  .closing {
+    text-align: center;
+    padding: 100px 30px;
+    margin-top: 100px;
+    background:
+      linear-gradient(180deg, rgba(42, 24, 16, 0.7) 0%, rgba(31, 58, 95, 0.85) 100%),
+      url('https://images.unsplash.com/photo-1531968455001-5c5272a41129?w=1600&q=80') center/cover;
+    color: var(--areia);
+  }
+
+  .closing-glyph {
+    font-size: 50px;
+    color: var(--dourado);
+    margin-bottom: 30px;
+  }
+
+  .closing h2 {
+    font-size: 56px;
+    margin-bottom: 30px;
+    line-height: 1.1;
+  }
+
+  .closing p {
+    font-size: 22px;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 12px;
+    line-height: 1.5;
+  }
+
+  .closing-quechua {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-top: 50px;
+  }
+
+  /* ===== RESPONSIVO ===== */
+  @media (max-width: 720px) {
+    body { font-size: 17px; }
+    main { padding: 60px 20px; }
+    .toc { padding: 30px 25px; }
+    h2.section-title { font-size: 38px; }
+    .place-body { padding: 30px 25px; }
+    .place-name { font-size: 32px; }
+    .info-row { grid-template-columns: 1fr; gap: 4px; padding: 10px 0; }
+    .checklist { columns: 1; }
+    .altitude-bars { height: 220px; }
+    .alt-label { font-size: 9px; transform: translateX(-50%) rotate(-45deg); }
+    .vocab-table { font-size: 14px; }
+    .vocab-table th, .vocab-table td { padding: 8px 10px; }
+    .closing h2 { font-size: 38px; }
+  }
+
+  /* Scroll progress hint */
+  .scroll-hint {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--terracota);
+    z-index: 100;
+    width: 0%;
+    transition: width 0.1s;
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-hint" id="progress"></div>
+
+<!-- ===== CAPA ===== -->
+<div class="cover">
+  <div class="cover-eyebrow">Almanaque Ilustrado · Edição 2026</div>
+
+  <h1 class="cover-title"><em>Perú</em></h1>
+
+  <div class="cover-glyph">☀</div>
+
+  <p class="cover-subtitle">
+    Um guia de primeira viagem<br>
+    pelas montanhas sagradas, ruínas perdidas<br>
+    e oceanos do antigo Tawantinsuyu
+  </p>
+
+  <div class="cover-rule"></div>
+
+  <div class="cover-meta">
+    07 — 17 de julho de 2026
+  </div>
+
+  <div class="cover-meta-row">
+    <span>11 dias</span>
+    <span>·</span>
+    <span>Lima · Cusco · Vale Sagrado · Machu Picchu</span>
+    <span>·</span>
+    <span>3 trilhas em altitude</span>
+  </div>
+</div>
+
+<main>
+
+<!-- ===== SUMÁRIO ===== -->
+<section id="sumario">
+  <div class="toc">
+    <h2 class="toc-title">Sumário</h2>
+    <p class="toc-sub">— Índice de Conteúdo —</p>
+    <ul class="toc-list">
+      <li><span class="toc-num">I</span><a href="#antes">Antes de embarcar</a><span class="toc-dots"></span></li>
+      <li><span class="toc-num">II</span><a href="#altitude">A altitude e o soroche</a><span class="toc-dots"></span></li>
+      <li><span class="toc-num">III</span><a href="#mala">A mala perfeita</a><span class="toc-dots"></span></li>
+      <li><span class="toc-num">IV</span><a href="#roteiro">O roteiro, dia a dia</a><span class="toc-dots"></span></li>
+      <li><span class="toc-num">V</span><a href="#lugares">Os lugares</a><span class="toc-dots"></span></li>
+      <li><span class="toc-num">VI</span><a href="#culinaria">Culinária peruana</a><span class="toc-dots"></span></li>
+      <li><span class="toc-num">VII</span><a href="#cuidados">Cuidados e perrengues</a><span class="toc-dots"></span></li>
+      <li><span class="toc-num">VIII</span><a href="#vocabulario">Vocabulário</a><span class="toc-dots"></span></li>
+      <li><span class="toc-num">IX</span><a href="#extras">Lugares extras</a><span class="toc-dots"></span></li>
+      <li><span class="toc-num">X</span><a href="#checklists">Checklists finais</a><span class="toc-dots"></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== I. ANTES DE EMBARCAR ===== -->
+<section id="antes">
+  <div class="section-num">Capítulo I</div>
+  <h2 class="section-title">Antes de <em>embarcar</em></h2>
+  <p class="section-intro">As primeiras decisões fazem toda a diferença. Resolva estas coisas com pelo menos dois meses de antecedência e a viagem flui muito melhor.</p>
+
+  <p class="first-paragraph">O Peru não é um destino que se improvisa em três dias antes do voo. É um país de geografia complicada, com voos internos sujeitos a tempo, ingressos que esgotam, e um corpo seu que precisa se preparar para o que vai enfrentar. Reservar com antecedência é o primeiro ato de respeito a essa viagem.</p>
+
+  <h3>Documentos</h3>
+  <ul class="fancy">
+    <li><strong>Passaporte ou RG novo</strong> (emitido nos últimos 10 anos): brasileiros não precisam de visto. Para Machu Picchu o documento é obrigatório — o nome no ingresso precisa bater exatamente com o documento.</li>
+    <li><strong>Vacina de febre amarela:</strong> não é exigida pelo Peru, mas é recomendada para regiões de selva (que não estão no roteiro de vocês).</li>
+    <li><strong>Seguro viagem internacional:</strong> não é obrigatório, mas é fortemente recomendado. Procure um seguro com cobertura para esportes de aventura — trilhas em altitude contam.</li>
+    <li><strong>Cópias digitais:</strong> deixe fotos do passaporte/RG, ingressos e reservas no celular e no e-mail. Tirem fotos uma do documento da outra também.</li>
+  </ul>
+
+  <h3>Dinheiro</h3>
+  <p>A moeda é o <em>sol peruano</em> (S/). Em junho de 2026, 1 sol vale aproximadamente R$ 1,40 — confira no dia da viagem.</p>
+  <ul class="fancy">
+    <li><strong>Leve dólares em espécie</strong> e troque no Peru — câmbio melhor que comprar soles no Brasil. Em Lima e Cusco há casas de câmbio confiáveis em Miraflores e na Plaza de Armas.</li>
+    <li>Cartão funciona em hotéis e restaurantes maiores, mas <strong>muitos passeios, táxis e mercados só aceitam dinheiro</strong>.</li>
+    <li>Saques em caixas BCP, Interbank e Scotiabank são confiáveis. Use Wise ou Nomad para reduzir o IOF.</li>
+    <li>Tenha sempre notas pequenas: S/ 100 e S/ 200 são difíceis de quebrar em estabelecimentos pequenos.</li>
+    <li>Reservem um caixinha em soles para banheiros públicos (S/ 1 a S/ 2 por uso, comum em pontos turísticos).</li>
+  </ul>
+
+  <h3>Conectividade</h3>
+  <ul class="fancy">
+    <li><strong>Chip internacional ou eSIM:</strong> Airalo, Holafly e Nomad funcionam bem. Compre antes de embarcar.</li>
+    <li>Chip local: Claro e Movistar têm planos pré-pagos baratos, comprados no aeroporto de Lima ou em qualquer bodega.</li>
+    <li>Baixem mapas offline do Google Maps de Lima, Cusco, Vale Sagrado e Aguas Calientes.</li>
+  </ul>
+
+  <div class="callout indigo">
+    <span class="callout-label">⚠ Dica de ouro · Voos internos</span>
+    <h4 class="callout-title" style="border:none; padding:0; text-transform:none; letter-spacing:normal; font-family:'DM Serif Display'; font-size:24px; color:var(--escuro); font-style:italic; margin:0 0 12px;">O aeroporto de Cusco fecha com frequência</h4>
+    <p>Por causa do tempo. Se vocês comprarem a passagem internacional separada da doméstica e perderem uma conexão, vão pagar uma nova passagem do bolso. <strong>Comprem sempre passagens com múltiplos destinos no mesmo bilhete</strong> (Brasil → Lima → Cusco → Brasil) — assim a companhia realoca de graça em caso de atraso. LATAM, Sky e JetSmart são as principais.</p>
+  </div>
+
+  <h3>Reservas que precisam ser feitas com antecedência</h3>
+  <ol class="fancy">
+    <li><strong>Ingressos de Machu Picchu</strong> — pelo site oficial <em>tuboleto.cultura.pe</em>. <strong>Reservem com pelo menos 3 meses de antecedência</strong> — julho é o mês mais cheio do ano e os ingressos do Circuito 2 esgotam rápido. O Circuito 2 (Clássico) é o ideal para primeira visita.</li>
+    <li><strong>Trem para Aguas Calientes</strong> — Inca Rail ou Peru Rail, sites oficiais. Saída de Ollantaytambo é a opção mais comum e barata.</li>
+    <li><strong>Hospedagem em Aguas Calientes</strong> — uma noite só, mas reservem cedo.</li>
+    <li><strong>Voos internos</strong> — quanto antes, mais barato.</li>
+    <li><strong>Tour da Laguna Humantay e Montanha 7 Cores</strong> — pode esperar até chegar em Cusco. Boas agências: Ciatrip, Viagens Machu Picchu, Salkantay Trekking.</li>
+  </ol>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ===== II. ALTITUDE ===== -->
+<section id="altitude">
+  <div class="section-num">Capítulo II</div>
+  <h2 class="section-title">A altitude e o <em>soroche</em></h2>
+  <p class="section-intro">Esse é o tópico mais importante deste guia. Subestimar a altitude é o erro número 1 de quem viaja para o Peru pela primeira vez.</p>
+
+  <p class="first-paragraph">O ar dos Andes é diferente. Não no sentido poético — literalmente: acima de 2.500 metros há menos oxigênio em cada respiração. O corpo de vocês precisa de tempo para produzir mais glóbulos vermelhos e se ajustar. Enquanto isso não acontece, ele protesta. <em class="highlight">Soroche</em> é o nome andino para esse mal — uma palavra que vai entrar no vocabulário de vocês logo nas primeiras 48 horas em Cusco.</p>
+
+  <div class="altitude-chart">
+    <h4>As altitudes da viagem</h4>
+    <div class="altitude-bars">
+      <div class="alt-bar lima" style="height: 5%;">
+        <span class="alt-value">0m</span>
+        <span class="alt-label">Lima</span>
+      </div>
+      <div class="alt-bar machu" style="height: 47%;">
+        <span class="alt-value">2.430m</span>
+        <span class="alt-label">Machu Picchu</span>
+      </div>
+      <div class="alt-bar olla" style="height: 54%;">
+        <span class="alt-value">2.792m</span>
+        <span class="alt-label">Ollantaytambo</span>
+      </div>
+      <div class="alt-bar vale" style="height: 55%;">
+        <span class="alt-value">2.870m</span>
+        <span class="alt-label">Vale Sagrado</span>
+      </div>
+      <div class="alt-bar cusco" style="height: 65%;">
+        <span class="alt-value">3.399m</span>
+        <span class="alt-label">Cusco</span>
+      </div>
+      <div class="alt-bar humantay" style="height: 81%;">
+        <span class="alt-value">4.200m</span>
+        <span class="alt-label">Humantay</span>
+      </div>
+      <div class="alt-bar cores" style="height: 100%;">
+        <span class="alt-value">5.200m</span>
+        <span class="alt-label">7 Cores</span>
+      </div>
+    </div>
+    <p style="margin-top:50px; font-size:15px; font-style:italic; color:var(--escuro); opacity:0.8; text-align:center;">Reparem: o Vale Sagrado é mais baixo que Cusco. Por isso muita gente sugere dormir lá nos primeiros dias.</p>
+  </div>
+
+  <h3>Os sintomas do soroche</h3>
+  <ul class="fancy">
+    <li>Dor de cabeça (o mais comum)</li>
+    <li>Falta de ar e cansaço ao subir escadas</li>
+    <li>Náusea, perda de apetite</li>
+    <li>Sono ruim, sonhos estranhos</li>
+    <li>Inchaço nos pés e mãos</li>
+    <li>Em casos graves: vômito persistente, confusão mental, dificuldade respiratória forte (procurem médico imediatamente)</li>
+  </ul>
+
+  <h3>Como prevenir e tratar</h3>
+
+  <h4>Antes da viagem (1 a 2 semanas antes)</h4>
+  <ul class="fancy">
+    <li><strong>Conversem com seu médico sobre Acetazolamida (Diamox)</strong> — remédio que ajuda na adaptação. Toma-se 1-2 dias antes de subir. Tem efeitos colaterais (formigamento nas mãos, vontade de urinar, gosto estranho de bebidas gaseificadas), então testem antes.</li>
+    <li>Evitem resfriados nas semanas anteriores — chegar gripada na altitude é horrível.</li>
+    <li>Não comecem nenhuma dieta restritiva — vocês vão precisar de energia.</li>
+  </ul>
+
+  <h4>Nas primeiras 48h em Cusco</h4>
+  <ul class="fancy">
+    <li><strong>Vão devagar.</strong> Literalmente. Caminhem mais lento do que se sentiria natural. Subam escadas em silêncio. Não façam nada agitado nas primeiras 24h.</li>
+    <li><strong>Hidratem-se MUITO.</strong> Mínimo 3 litros de água por dia. A altitude desidrata muito mais rápido do que parece.</li>
+    <li><strong>Evitem álcool nas primeiras 48h.</strong> Sério. O efeito é multiplicado e o soroche piora muito. Pisco sour fica para depois.</li>
+    <li>Comam leve: sopas, frutas, carboidratos. Evitem carne vermelha e gordurosa no primeiro dia.</li>
+    <li><strong>Mate de coca:</strong> oferecido em todos os hotéis, é grátis e ajuda muito. Tomem várias xícaras por dia. Vocês também podem mastigar as folhas (técnica chamada <em>chacchar</em>).</li>
+    <li>Doce: balas, chocolates ou açúcar puro ajudam quando bate uma fraqueza.</li>
+    <li><strong>Soroche pills:</strong> em qualquer farmácia, sem receita. Funcionam para alívio rápido de dor de cabeça.</li>
+    <li>Oxigênio em lata: vendido em farmácias e hotéis. Útil em emergência, mas não substitui aclimatação.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="callout-label">★ A regra de ouro da altitude</span>
+    <h4 class="callout-title" style="border:none; padding:0; text-transform:none; letter-spacing:normal; font-family:'DM Serif Display'; font-size:24px; color:var(--escuro); font-style:italic; margin:0 0 12px;">Suba devagar. Trilhas pesadas só depois de 4 dias.</h4>
+    <p>Se possível, comecem pelo Vale Sagrado (mais baixo) e só depois vão para Cusco. E <strong>NUNCA façam Montanha das 7 Cores ou Laguna Humantay nos primeiros dois dias em altitude</strong> — deixem para o quarto dia ou mais. O corpo precisa de pelo menos 48 horas para começar a se adaptar.</p>
+  </div>
+
+  <h3>Outros desafios de adaptação</h3>
+
+  <h4>Sol forte</h4>
+  <p>A radiação UV em altitude é brutal — muito mais intensa do que no Brasil. Protetor solar FPS 50+, chapéu, óculos de sol e protetor labial são <strong>obrigatórios</strong> todos os dias, mesmo nublado.</p>
+
+  <h4>Frio e variação térmica</h4>
+  <p>Em Cusco, em julho, pode ter 20°C ao meio-dia e -2°C à noite. Os hotéis raramente têm aquecimento central — peçam cobertor extra (alguns têm aquecedor portátil ou bolsa de água quente, vale pedir). As trilhas de altitude podem ter sensação térmica de -10°C com vento.</p>
+
+  <h4>Ressecamento</h4>
+  <p>Pele, lábios, nariz e olhos sofrem muito. Levem hidratante, lip balm, soro fisiológico em spray para o nariz e colírio. Sangramento nasal leve é comum nos primeiros dias.</p>
+
+  <h4>Estômago</h4>
+  <p>Mudança de água, comida nova, ceviche. Diarréia do viajante é comum. Levem Floratil, Plasil e Loperamida (Imosec). <strong>Bebam só água engarrafada</strong> — nunca da torneira, nem para escovar os dentes.</p>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ===== III. MALA ===== -->
+<section id="mala">
+  <div class="section-num">Capítulo III</div>
+  <h2 class="section-title">A mala <em>perfeita</em></h2>
+  <p class="section-intro">Julho é o mês mais frio do inverno andino — estação seca em pleno auge, dias ensolarados e céu absurdamente azul, noites geladas (pode chegar a -2°C em Cusco e abaixo de zero nas trilhas). A regra é o sistema cebola: vocês tiram e colocam camadas conforme o dia esquenta.</p>
+
+  <h3>Roupas — o sistema de camadas</h3>
+
+  <h4>Camada 1 · Base térmica (segunda pele)</h4>
+  <ul class="fancy">
+    <li>2 camisetas térmicas de manga longa — uma para usar de dia, outra para dormir</li>
+    <li>1 calça térmica para dormir (em Cusco e Vale)</li>
+    <li>Meias térmicas — pelo menos 3 pares grossos</li>
+  </ul>
+
+  <h4>Camada 2 · Isolamento (calor)</h4>
+  <ul class="fancy">
+    <li>1 a 2 fleeces ou moletons</li>
+    <li>Suéter de lã (vocês podem comprar lindos de alpaca lá — sai mais barato)</li>
+  </ul>
+
+  <h4>Camada 3 · Proteção (vento e chuva)</h4>
+  <ul class="fancy">
+    <li><strong>1 jaqueta corta-vento e impermeável</strong> — essencial para Humantay, 7 Cores e Paracas</li>
+    <li>1 jaqueta puff (de pluma ou sintética) leve — ocupa pouco espaço e salva nas trilhas</li>
+  </ul>
+
+  <h4>Roupas gerais</h4>
+  <ul class="fancy">
+    <li>2 calças de trilha (impermeáveis ou de secagem rápida)</li>
+    <li>1 calça jeans para Cusco e Lima</li>
+    <li>Roupas de baixo confortáveis (não algodão para trilhas — segura suor)</li>
+    <li>Roupas mais leves para Lima (15–18°C de dia, mas sem altitude. Lima é cinza e fria em julho)</li>
+    <li>Pijama quentinho</li>
+  </ul>
+
+  <h4>Acessórios essenciais</h4>
+  <ul class="fancy">
+    <li>Touca / gorro — obrigatório nas trilhas</li>
+    <li>Luvas — para Humantay e 7 Cores</li>
+    <li>Cachecol ou buff (multifuncional)</li>
+    <li>Óculos de sol com proteção UV (em altitude isso é saúde, não estilo)</li>
+    <li>Chapéu de aba ou boné</li>
+  </ul>
+
+  <h4>Calçados</h4>
+  <ul class="fancy">
+    <li><strong>Bota de trilha impermeável</strong> — essencial. Comprem com antecedência e USEM pelo menos 5-6 vezes antes da viagem. Bota nova é receita garantida de bolha.</li>
+    <li>Tênis confortável para city tours</li>
+    <li>Chinelo / sandália para o hotel</li>
+  </ul>
+
+  <h3>Mochila de uso diário (25-30L)</h3>
+  <ul class="fancy">
+    <li>Garrafa térmica ou squeeze (1L)</li>
+    <li>Lanches: barras de cereais, castanhas, chocolate</li>
+    <li>Capa de chuva da mochila</li>
+    <li>Carregador portátil</li>
+    <li>Documentos em saquinho impermeável</li>
+    <li>Papel higiênico e álcool em gel (banheiros do interior nem sempre têm papel)</li>
+    <li>Lenços umedecidos</li>
+  </ul>
+
+  <div class="callout green">
+    <span class="callout-label">+ Farmacinha essencial</span>
+    <h4 class="callout-title" style="border:none; padding:0; text-transform:none; letter-spacing:normal; font-family:'DM Serif Display'; font-size:24px; color:var(--escuro); font-style:italic; margin:0 0 12px;">O kit que pode salvar a viagem</h4>
+    <p><strong>Diamox (acetazolamida)</strong> para altitude · analgésico (paracetamol/dipirona) · ibuprofeno para dor muscular · antialérgico · <strong>Floratil</strong> (probiótico) — comecem 1 semana antes · Plasil (enjoo) · Imosec/Loperamida (diarréia) · soro caseiro em pó · band-aid e curativo para bolha (Compeed é ótimo) · protetor solar FPS 50+ · protetor labial com FPS · hidratante · colírio · soro fisiológico para nariz · remédios de uso contínuo (com receita médica em inglês)</p>
+  </div>
+
+  <h3>Eletrônicos</h3>
+  <ul class="fancy">
+    <li>Adaptador de tomada — Peru usa tipos A e C. Os hotéis têm tomadas mistas, mas levem adaptador universal por segurança.</li>
+    <li>Carregador portátil (power bank) — essencial nos passeios longos</li>
+    <li>Câmera (opcional) — celulares dão conta, mas Peru é foto-paraíso</li>
+    <li>Cabos extras</li>
+  </ul>
+
+  <h3>Outros úteis</h3>
+  <ul class="fancy">
+    <li>Cadeado pequeno para mochilas e armários</li>
+    <li>Pochete ou money belt para usar por baixo da roupa</li>
+    <li>Sacolinha plástica para roupas sujas/molhadas</li>
+    <li>Garrafa térmica pequena (vocês podem pedir mate de coca quente em qualquer lugar)</li>
+    <li>Caderninho ou diário — vocês vão querer escrever sobre essa viagem</li>
+  </ul>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ===== IV. ROTEIRO ===== -->
+<section id="roteiro">
+  <div class="section-num">Capítulo IV</div>
+  <h2 class="section-title">O roteiro, <em>dia a dia</em></h2>
+  <p class="section-intro">A ordem importa muito no Peru. Esta proposta segue duas regras de ouro: começar pelo nível do mar para subir gradualmente em altitude, e deixar Machu Picchu como o gran finale.</p>
+
+  <div class="callout indigo">
+    <span class="callout-label">◆ Lógica do roteiro</span>
+    <p>Lima (nível do mar) → Paracas/Huacachina opcional → voo para Cusco → primeiro dia leve para aclimatar → Vale Sagrado (mais baixo que Cusco) → Machu Picchu → trilhas de altitude (Humantay e 7 Cores) só depois de aclimatar.</p>
+  </div>
+
+  <div class="timeline">
+
+    <div class="day">
+      <div class="day-num">Dia 01 · Terça</div>
+      <h3 class="day-title">Chegada em Lima<br><span class="day-date">07 de julho</span></h3>
+      <p>Vocês desembarcam em Lima. Hospedem-se em <strong>Miraflores ou Barranco</strong> — bairros seguros, charmosos e perto dos restaurantes. Dia para descansar do voo, conhecer o calçadão à beira-mar (Larcomar e Parque del Amor), tomar o primeiro pisco sour e jantar em algum dos restaurantes. Não façam nada cansativo — vocês têm muita estrada pela frente.</p>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Dia 02 · Quarta</div>
+      <h3 class="day-title">City tour Lima<br><span class="day-date">08 de julho</span></h3>
+      <p>Manhã no Centro Histórico: Plaza Mayor, Catedral, Palácio do Governo, e o ponto alto — o <strong>Convento de San Francisco e suas catacumbas</strong>. À tarde, escolham entre o Museo Larco (cerâmicas pré-incas, jardim lindo) ou o Circuito Mágico das Águas. À noite, jantar especial em Miraflores ou Barranco — Lima é uma das melhores cidades gastronômicas do mundo.</p>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Dia 03 · Quinta</div>
+      <h3 class="day-title">Paracas + Huacachina <em>(opcional)</em><br><span class="day-date">09 de julho</span></h3>
+      <p>Decisão importante. Esse passeio é incrível, mas é muito intenso: saída às 4h da manhã, 8h de ônibus em um dia, retorno à meia-noite. Se vocês decidirem fazer, é dia inteiro. Se decidirem pular, voem para Cusco já no dia 09 e ganhem um dia extra de aclimatação.</p>
+      <div class="callout gold" style="margin-top: 20px;">
+        <span class="callout-label">⚠ Recomendação honesta</span>
+        <p>Se for prioridade absoluta, façam. Mas considerem cortar para ter um dia extra de descanso ou de Vale Sagrado — é mais valioso para a aclimatação e o resto da viagem flui melhor. Vocês podem voltar ao Peru um dia só por Paracas.</p>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Dia 04 · Sexta</div>
+      <h3 class="day-title">Cusco — chegada e aclimatação<br><span class="day-date">10 de julho</span></h3>
+      <p>Voo bem cedo Lima → Cusco (1h20). Chegada, chá de coca no hotel, deixem as malas e vão com calma. <strong>NÃO façam trilha hoje.</strong> Caminhem devagar pelo bairro de San Blas, Plaza de Armas, entrem na Catedral. Almoço leve. À tarde, sonecão. À noite, jantar leve perto do hotel. Bebam muita água e durmam cedo.</p>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Dia 05 · Sábado</div>
+      <h3 class="day-title">Vale Sagrado dos Incas<br><span class="day-date">11 de julho</span></h3>
+      <p>Tour de dia inteiro. Roteiro clássico: <strong>Pisac → Salineras de Maras → Moray → Ollantaytambo</strong>. Almoço em Urubamba. O Vale é mais baixo que Cusco, ideal para o segundo dia em altitude. Volta para Cusco no fim do dia, ou — alternativa esperta — durmam em Ollantaytambo, já adiantando a viagem para Machu Picchu.</p>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Dia 06 · Domingo</div>
+      <h3 class="day-title">Machu Picchu<br><span class="day-date">12 de julho</span></h3>
+      <p>O dia mais esperado. Trem de Ollantaytambo até Aguas Calientes (~1h30). De Aguas, ônibus até a entrada do parque (25 min). Visita guiada de 2h30 pelo <strong>Circuito 2 (Clássico)</strong>. Volta de trem para Ollantaytambo no fim do dia, e de carro para Cusco. Alternativa: dormir em Aguas Calientes para entrar ainda mais cedo no dia seguinte.</p>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Dia 07 · Segunda</div>
+      <h3 class="day-title">Laguna Humantay<br><span class="day-date">13 de julho</span></h3>
+      <p>Acordar às 4h. Trekking moderado/difícil — 7km de subida em altitude que vai de 3.900m até 4.200m. A recompensa é uma das paisagens mais surreais do mundo: lagoa turquesa cercada de geleiras. Volta a Cusco no fim do dia. Jantar leve, descanso. Vocês já estarão aclimatadas para isso.</p>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Dia 08 · Terça</div>
+      <h3 class="day-title">Cusco — descanso ativo<br><span class="day-date">14 de julho</span></h3>
+      <p>Dia importante de descanso entre as duas trilhas mais duras. Aproveitem para conhecer Cusco com calma: <strong>Qorikancha, Sacsayhuamán, Mercado de San Pedro, San Blas, compras de lembrancinhas</strong>. Jantar especial — talvez no MAP Café ou no Cicciolina.</p>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Dia 09 · Quarta</div>
+      <h3 class="day-title">Montanha das 7 Cores<br><span class="day-date">15 de julho</span></h3>
+      <p>Outra saída de madrugada (4h). É a trilha mais alta e mais dura: chega a 5.200m. Mesmo aclimatadas, preparem-se para ir devagar. A paisagem é única no mundo — montanha listrada de cores naturais por causa dos minerais. Volta a Cusco no fim do dia, exaustas mas felizes.</p>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Dia 10 · Quinta</div>
+      <h3 class="day-title">Cusco livre · voo para Lima<br><span class="day-date">16 de julho</span></h3>
+      <p>Manhã livre em Cusco para o que ficou faltando ou para descansar. Voo para Lima à tarde. <strong>Jantar de despedida</strong> em algum restaurante especial — Maido, Central, Astrid y Gastón se quiserem luxo, ou Isolina, La Mar, Canta Rana para experiências incríveis sem o preço astronômico.</p>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Dia 11 · Sexta</div>
+      <h3 class="day-title">Hasta pronto, Perú<br><span class="day-date">17 de julho</span></h3>
+      <p>Manhã para algo leve em Lima — café da manhã caprichado, talvez uma volta no Mercado de Surquillo, e voo de volta. <em>Tupananchiskama, Perú.</em></p>
+    </div>
+
+  </div>
+
+  <div class="callout green">
+    <span class="callout-label">↻ Variação importante</span>
+    <h4 class="callout-title" style="border:none; padding:0; text-transform:none; letter-spacing:normal; font-family:'DM Serif Display'; font-size:24px; color:var(--escuro); font-style:italic; margin:0 0 12px;">Se vocês cortarem Paracas/Huacachina</h4>
+    <p>Ganham um dia inteiro. Sugestão: dormir uma noite no <strong>Vale Sagrado</strong> (Urubamba ou Ollantaytambo), o que torna a aclimatação muito mais suave e ainda permite explorar o Vale com calma. Outra opção: dormir em Aguas Calientes para visitar Machu Picchu logo de manhã, com a luz mais bonita do dia.</p>
+  </div>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ===== V. OS LUGARES ===== -->
+<section id="lugares">
+  <div class="section-num">Capítulo V</div>
+  <h2 class="section-title">Os <em>lugares</em></h2>
+  <p class="section-intro">Aqui vai a história, cultura, dicas práticas e o que esperar de cada destino do roteiro de vocês — para chegar preparada e voltar transformada.</p>
+
+  <!-- LIMA -->
+  <div class="place-card">
+    <div class="place-hero" style="background-image: url('https://images.unsplash.com/photo-1531968455001-5c5272a41129?w=1600&q=80');">
+      <div class="place-hero-label">Lima</div>
+    </div>
+    <div class="place-body">
+      <h2 class="place-name">Lima</h2>
+      <p class="place-tagline">Ciudad de los Reyes — a capital costeira</p>
+
+      <div class="info-table">
+        <div class="info-row"><div class="info-key">Altitude</div><div>Nível do mar (0–150m)</div></div>
+        <div class="info-row"><div class="info-key">População</div><div>~10 milhões</div></div>
+        <div class="info-row"><div class="info-key">Clima em julho</div><div>Fresco e nublado, 15–18°C, garoa fina típica (<em>garúa</em>)</div></div>
+        <div class="info-row"><div class="info-key">Tempo ideal</div><div>2 dias inteiros</div></div>
+      </div>
+
+      <p>Fundada por Francisco Pizarro em 1535, Lima foi por séculos a capital mais importante da América espanhola. Hoje é uma metrópole gigante, contraditória e absolutamente apaixonante — uma das maiores capitais gastronômicas do mundo.</p>
+
+      <h4>História rápida</h4>
+      <p>Antes da chegada dos espanhóis, a região já era habitada há mais de 4 mil anos pelas culturas Lima, Wari e Ychsma. Os incas chegaram tarde, em meados do século XV. Em 1535 Pizarro fundou ali a "Ciudad de los Reyes", que se tornou o centro do poder colonial espanhol em toda a América do Sul. O Centro Histórico de Lima foi declarado Patrimônio Mundial pela UNESCO.</p>
+
+      <h4>O que fazer</h4>
+      <ul class="fancy">
+        <li><strong>Centro Histórico:</strong> Plaza Mayor (com a Catedral, o Palácio do Governo e o Palácio Arcebispal), Plaza San Martín, e os balcões de madeira coloniais.</li>
+        <li><strong>Convento de San Francisco e Catacumbas (sua prioridade!):</strong> uma das igrejas mais bonitas das Américas, com biblioteca antiquíssima e — o ponto alto — as catacumbas com mais de 25.000 ossos arrumados em padrões geométricos. Visita guiada (~1h).</li>
+        <li><strong>Miraflores:</strong> bairro chique à beira-mar. Caminhem pelo Malecón, conheçam o Parque del Amor com a escultura "El Beso", e vejam os parapentes voando.</li>
+        <li><strong>Barranco:</strong> bairro boêmio cheio de arte de rua, ateliês, bares e a famosa Puente de los Suspiros.</li>
+        <li><strong>Museo Larco:</strong> uma joia. Vasta coleção de cerâmicas pré-colombianas (incluindo a infame sala de cerâmicas eróticas Moche). Lindo café no jardim.</li>
+        <li><strong>Huaca Pucllana:</strong> pirâmide pré-inca de adobe, no meio de Miraflores. Surreal.</li>
+        <li><strong>Circuito Mágico das Águas:</strong> show de fontes coloridas à noite, no Parque de la Reserva.</li>
+      </ul>
+
+      <h4>Fauna e flora</h4>
+      <p>Lima fica em um deserto costeiro alimentado pela neblina (<em>loma</em>). A fauna mais marcante são os pelicanos, urubus negros e gaivotas que voam pelo Malecón. No mar, a corrente fria de Humboldt traz vida marinha rica.</p>
+    </div>
+  </div>
+
+  <!-- PARACAS / HUACACHINA -->
+  <div class="place-card">
+    <div class="place-hero" style="background-image: url('https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?w=1600&q=80');">
+      <div class="place-hero-label">Paracas · Ballestas · Huacachina</div>
+    </div>
+    <div class="place-body">
+      <h2 class="place-name">Paracas, Ballestas &amp; Huacachina</h2>
+      <p class="place-tagline">Oceano, deserto e oásis — três paisagens em um dia</p>
+
+      <div class="info-table">
+        <div class="info-row"><div class="info-key">Altitude</div><div>Nível do mar (Paracas) / 400m (Huacachina)</div></div>
+        <div class="info-row"><div class="info-key">Distância de Lima</div><div>260 km (Paracas) · 305 km (Huacachina) — 4h de ônibus</div></div>
+        <div class="info-row"><div class="info-key">Clima em julho</div><div>Ensolarado mas ventoso. 17–22°C</div></div>
+        <div class="info-row"><div class="info-key">Tempo ideal</div><div>1 dia (bate-volta intenso) ou 2 dias (com pernoite)</div></div>
+      </div>
+
+      <h4>Ilhas Ballestas — "Galápagos peruano dos pobres"</h4>
+      <p>Arquipélago rochoso a 30 min de barco da costa de Paracas. Abrigam grandes colônias de <strong>leões-marinhos, pinguins-de-Humboldt, pelicanos, atobás</strong> e milhares de aves. Não se desembarca — é tudo visto do barco. Antes de chegar às ilhas, vocês veem o famoso <em>Candelabro</em>: enorme geoglifo gravado em uma encosta, mais antigo que as Linhas de Nazca, cuja origem é mistério. Levem casaco corta-vento — é frio e ventoso no mar.</p>
+
+      <h4>Huacachina — único oásis natural da América do Sul</h4>
+      <p>Uma lagoa em meio às dunas gigantes do deserto de Ica. A graça é o <strong>passeio de buggy</strong> (parece montanha-russa, segurem firme!) e o <strong>sandboard</strong>. Pôr do sol das dunas é inesquecível.</p>
+
+      <div class="margin-note">
+        <span class="label">★ Avisos importantes</span>
+        Saída 4-5h da manhã, retorno por volta da meia-noite. Cinto de segurança dos buggies é frágil — segurem firme nas barras laterais. Levem bandana ou buff para proteger boca/nariz da areia. Quem tem problema de coluna ou está grávida — não façam o buggy.
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSCO -->
+  <div class="place-card">
+    <div class="place-hero" style="background-image: url('https://images.unsplash.com/photo-1531968455001-5c5272a41129?w=1600&q=80');">
+      <div class="place-hero-label">Cusco</div>
+    </div>
+    <div class="place-body">
+      <h2 class="place-name">Cusco</h2>
+      <p class="place-tagline"><em>Qosqo</em> — o umbigo do mundo</p>
+
+      <div class="info-table">
+        <div class="info-row"><div class="info-key">Altitude</div><div>3.399m</div></div>
+        <div class="info-row"><div class="info-key">População</div><div>~430.000</div></div>
+        <div class="info-row"><div class="info-key">Clima em julho</div><div>Estação seca: 18–20°C de dia, -2 a 5°C à noite. Sol forte, céu limpíssimo</div></div>
+        <div class="info-row"><div class="info-key">Tempo ideal</div><div>3 dias mínimo (incluindo aclimatação)</div></div>
+      </div>
+
+      <p>Cusco é mágica. Era o centro do Império Inca — o nome vem do quechua <em>Qosqo</em>, que significa <strong>umbigo, centro do mundo</strong>. Daqui partiam os caminhos que ligavam todo o <em>Tawantinsuyu</em> (o império dos quatro cantos). Os espanhóis a conquistaram em 1533 e construíram suas igrejas e palácios sobre as bases incas — você vê isso nas ruas, onde paredes coloniais brancas se erguem sobre fundações de pedras pretas perfeitamente encaixadas. Patrimônio Mundial UNESCO.</p>
+
+      <div class="callout gold">
+        <span class="callout-label">🎊 Bônus de julho</span>
+        <h4 class="callout-title" style="border:none; padding:0; text-transform:none; letter-spacing:normal; font-family:'DM Serif Display'; font-size:24px; color:var(--escuro); font-style:italic; margin:0 0 12px;">Vocês vão pegar Cusco em festa</h4>
+        <p>Julho é o <strong>mês mais cultural do ano</strong> em Cusco. As festividades começam com o Inti Raymi (24 de junho) e seguem por semanas com desfiles escolares, danças folclóricas, procissões e apresentações na Plaza de Armas. Fiquem de olho na agenda da prefeitura quando chegarem — vai ter algo acontecendo quase todo dia. <em>Por outro lado:</em> Cusco também fica mais cheia, hotéis lotam e os preços sobem. Vocês escapam por pouco do feriado da Independência (28-29/jul) — sorte!</p>
+      </div>
+
+      <h4>Cultura e história</h4>
+      <p>Cusco é, em muitos sentidos, a alma do Peru. As mulheres ainda usam roupas tradicionais coloridas, fala-se quechua nas ruas, e as festividades incas são celebradas com fervor. <strong>Atenção: vocês vão pegar Cusco em pleno mês de festividades!</strong> Julho inteiro tem desfiles, danças e shows na Plaza de Armas, herança das celebrações que começam com o Inti Raymi (24 de junho) e seguem o mês todo. É uma sorte enorme — vocês vão ver a cidade no auge da sua energia cultural.</p>
+
+      <h4>O que fazer</h4>
+      <ul class="fancy">
+        <li><strong>Plaza de Armas:</strong> coração da cidade. À noite fica iluminada e é lindíssima.</li>
+        <li><strong>Catedral:</strong> construída em cima de um palácio inca, com obras como a famosa pintura da Última Ceia onde Jesus come <em>cuy</em> (porquinho-da-índia).</li>
+        <li><strong>Qorikancha:</strong> o mais sagrado templo inca, do Sol. Os espanhóis construíram uma igreja por cima. Vejam as paredes incas perfeitamente encaixadas — não cabe nem uma folha de papel entre as pedras.</li>
+        <li><strong>Sacsayhuamán:</strong> fortaleza colossal acima da cidade, com pedras de até 200 toneladas. Vista incrível de Cusco lá de cima.</li>
+        <li><strong>San Blas:</strong> bairro dos artistas, com ruelas íngremes, ateliês, cafés bonitinhos.</li>
+        <li><strong>Mercado de San Pedro:</strong> mercado local com frutas, sucos, comidas, lembranças. Suco de papaya com naranja por S/5 é vida.</li>
+        <li><strong>Calle Hatun Rumiyoc:</strong> rua famosa pela "pedra dos doze ângulos" — exemplo perfeito da engenharia inca.</li>
+      </ul>
+
+      <div class="callout gold">
+        <span class="callout-label">🎫 Boleto Turístico de Cusco</span>
+        <p>É um ingresso combinado obrigatório para várias atrações. O <strong>integral custa S/130</strong> (vale 10 dias) e inclui Sacsayhuamán, Qenqo, Puka Pukara, Tambomachay, Moray, Pisac, Ollantaytambo, Chinchero, vários museus e o Centro Qosqo de Arte Nativo (apresentação de danças). Comprem quando chegar.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALE SAGRADO -->
+  <div class="place-card">
+    <div class="place-hero" style="background-image: url('https://images.unsplash.com/photo-1526392060635-9d6019884377?w=1600&q=80');">
+      <div class="place-hero-label">Vale Sagrado dos Incas</div>
+    </div>
+    <div class="place-body">
+      <h2 class="place-name">Vale Sagrado dos Incas</h2>
+      <p class="place-tagline">O celeiro fértil do império</p>
+
+      <div class="info-table">
+        <div class="info-row"><div class="info-key">Altitude</div><div>2.800–3.200m (mais baixo que Cusco)</div></div>
+        <div class="info-row"><div class="info-key">Distância de Cusco</div><div>1h–1h30 de carro</div></div>
+        <div class="info-row"><div class="info-key">Clima em julho</div><div>Agradável de dia (19°C), bem frio à noite (próximo a 0°C)</div></div>
+        <div class="info-row"><div class="info-key">Tempo ideal</div><div>1 dia (tour) ou 2 dias (com pernoite)</div></div>
+      </div>
+
+      <p>O vale do rio Urubamba é onde os incas plantaram a maior parte do milho do império. Solo fértil, clima ameno, terraços impressionantes em montanhas. Cada povoado guarda ruínas, mercados e tradições vivas. Pode ser visitado em um dia, mas é melhor com pernoite — os hotéis-fazenda do vale são lindos.</p>
+
+      <h4>Pisac</h4>
+      <p>Famoso pelos <strong>terraços agrícolas espetaculares</strong> na encosta da montanha e pelo mercado de artesanato (mais autêntico aos domingos, terças e quintas). As ruínas no alto da montanha são maravilhosas e dão acesso a cemitérios incas escavados nas pedras.</p>
+
+      <h4>Salineras de Maras</h4>
+      <p>Cerca de <strong>4.500 piscinas de sal escalonadas</strong> em uma encosta. Existem desde antes dos incas — a água sai salgada de um manancial subterrâneo, é canalizada para as poças e evapora deixando o sal. Cada poça pertence a uma família local, gestão comunitária mantida há séculos. Visualmente alucinante.</p>
+
+      <h4>Moray</h4>
+      <p>Conjunto de <strong>terraços circulares concêntricos</strong>, como anfiteatros que descem para dentro da terra. Os pesquisadores acreditam que era um centro experimental agrícola: cada nível tem microclima diferente (a temperatura entre o topo e o fundo varia até 15°C), o que permitia aos incas testar plantas em condições diversas. Engenharia genial.</p>
+
+      <h4>Ollantaytambo</h4>
+      <p>Uma das poucas <strong>cidades de planejamento urbano inca ainda habitadas</strong>. As ruas e canais são originais. A fortaleza é monumental — terraços e templos no alto de uma montanha íngreme. Foi um dos últimos redutos da resistência inca contra os espanhóis. Manco Inca derrotou os espanhóis aqui em 1537. Ponto de partida do trem para Machu Picchu.</p>
+
+      <h4>Chinchero</h4>
+      <p>Aldeia tradicional onde mulheres ainda <strong>tecem com técnicas pré-incas</strong>, usando corantes naturais. Visitem uma cooperativa têxtil para ver o processo. A igreja colonial é uma das mais bonitas do vale.</p>
+    </div>
+  </div>
+
+  <!-- MACHU PICCHU -->
+  <div class="place-card">
+    <div class="place-hero" style="background-image: url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1600&q=80');">
+      <div class="place-hero-label">Machu Picchu</div>
+    </div>
+    <div class="place-body">
+      <h2 class="place-name">Machu Picchu</h2>
+      <p class="place-tagline">A cidade perdida — uma das Sete Maravilhas</p>
+
+      <div class="info-table">
+        <div class="info-row"><div class="info-key">Altitude</div><div>2.430m (mais baixo que Cusco!)</div></div>
+        <div class="info-row"><div class="info-key">Localização</div><div>Aguas Calientes (Machu Picchu Pueblo)</div></div>
+        <div class="info-row"><div class="info-key">Como chegar</div><div>Trem de Ollantaytambo (~1h30) + ônibus (25 min)</div></div>
+        <div class="info-row"><div class="info-key">Clima em julho</div><div>Estação seca em pleno auge: 18–22°C, ensolarado, baixíssima chance de chuva</div></div>
+        <div class="info-row"><div class="info-key">Tempo na cidadela</div><div>2h30 a 4h dependendo do circuito</div></div>
+      </div>
+
+      <p>Construída por volta de 1450 sob o reinado de <strong>Pachacutec</strong>, Machu Picchu provavelmente foi uma residência real e centro religioso. Foi abandonada por motivos ainda discutidos — possivelmente quando os espanhóis chegaram, para protegê-la do saque. Ficou esquecida pelo mundo até 1911, quando o explorador <em>Hiram Bingham</em> (acompanhado de moradores locais que sempre souberam de sua existência) a "redescobriu". Hoje é Patrimônio da Humanidade e uma das Sete Maravilhas do Mundo Moderno.</p>
+
+      <div class="callout">
+        <span class="callout-label">🎫 Qual ingresso comprar</span>
+        <h4 class="callout-title" style="border:none; padding:0; text-transform:none; letter-spacing:normal; font-family:'DM Serif Display'; font-size:24px; color:var(--escuro); font-style:italic; margin:0 0 12px;">Circuito 2 (Clássico) — Rota 2A</h4>
+        <p>Desde 2024, a visita é organizada em 3 circuitos com 10 rotas. Cada ingresso dá acesso a UMA rota e não pode ser alterado. Para uma primeira visita, o <strong>Circuito 2 — Rota 2A</strong> é o mais completo: permite a foto clássica do mirante e o acesso à parte urbana da cidadela (templos, praças). Duração ~2h30. Para encarar uma trilha extra, o Circuito 1 com Montanha Machu Picchu (Rota 1A) ou o Circuito 3 com Huayna Picchu (Rota 3A) são opções, mas exigem reserva muito antecipada e fôlego.</p>
+      </div>
+
+      <h4>Dicas práticas</h4>
+      <ul class="fancy">
+        <li>Comprem pelo site oficial: <strong>tuboleto.cultura.pe</strong> (qualquer outro pode ser fraude)</li>
+        <li>Trem: Inca Rail e Peru Rail saem de Ollantaytambo. O Vistadome / 360 tem teto de vidro — vale o upgrade pela paisagem.</li>
+        <li>Ônibus de Aguas Calientes até a entrada: $25 USD por trecho. Comprar lá mesmo. Alternativa: subir a pé (1h30 íngreme).</li>
+        <li><strong>Banheiros e comida só FORA da cidadela.</strong> Vão antes de entrar.</li>
+        <li>PROIBIDO entrar com tripé, drone, mochila grande (>20L), comida, palitos de selfie. Há guarda-volumes na entrada.</li>
+        <li><strong>Passaporte/RG:</strong> indispensável. Conferem na entrada.</li>
+        <li>Carimbo decorativo de Machu Picchu: peçam na saída (de graça). Lembrancinha imbatível.</li>
+        <li>Contratem um <strong>guia em português</strong> na entrada. A história contada lá no local muda tudo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HUMANTAY -->
+  <div class="place-card">
+    <div class="place-hero" style="background-image: url('https://images.unsplash.com/photo-1583416750470-bcdfd9d20bbf?w=1600&q=80');">
+      <div class="place-hero-label">Laguna Humantay</div>
+    </div>
+    <div class="place-body">
+      <h2 class="place-name">Laguna Humantay</h2>
+      <p class="place-tagline">A lagoa turquesa aos pés do Salkantay</p>
+
+      <div class="info-table">
+        <div class="info-row"><div class="info-key">Altitude</div><div>4.200m (a trilha começa a 3.900m)</div></div>
+        <div class="info-row"><div class="info-key">Distância de Cusco</div><div>~125 km, 3h de carro</div></div>
+        <div class="info-row"><div class="info-key">Trekking</div><div>7 km ida e volta, 300m de elevação. Dificuldade: moderada-alta</div></div>
+        <div class="info-row"><div class="info-key">Tempo total</div><div>~12h (tour de dia inteiro)</div></div>
+        <div class="info-row"><div class="info-key">Clima em julho</div><div>Ensolarado e seco. Frio intenso, -2 a 8°C, vento. Pode ter geada de manhã</div></div>
+      </div>
+
+      <p>A lagoa fica aos pés do <strong>Nevado Salkantay</strong> (uma das montanhas mais sagradas dos Andes), na cordilheira Vilcabamba. Suas águas turquesa vêm do degelo das geleiras. Em quechua, <em>Humantay</em> pode significar "cabeça sagrada", referência a sua importância espiritual. A lenda local conta que os irmãos Salkantay e Ausangate, montanhas-divindades, formaram a lagoa em sua jornada para combater a fome do povo.</p>
+
+      <h4>Como é o passeio</h4>
+      <p>Saída de Cusco às 4h30 da manhã. Café em Mollepata. Chegada em Soraypampa (3.900m), onde começa a trilha. A primeira parte é plana, mas logo a subida íngreme começa — 1h30 a 2h de esforço puro em altitude. Quando vocês chegarem, o cenário tira o (pouco) ar que ainda resta: lagoa turquesa, geleiras refletidas, silêncio absoluto. Fica-se cerca de 1h no local. Volta é descida, mais fácil. Retorno a Cusco no fim do dia.</p>
+
+      <h4>Cuidados específicos</h4>
+      <ul class="fancy">
+        <li>NÃO façam nos primeiros 2-3 dias em altitude. Ideal é estar há pelo menos 4 dias em Cusco/Vale.</li>
+        <li>Não é uma competição — vão no seu ritmo, parem quando precisar.</li>
+        <li>Se sentirem mal de altitude forte, NÃO subam. Voltem com o grupo.</li>
+        <li>Existe a opção de alugar cavalo (~S/80) para subir, mas considerem o bem-estar dos animais.</li>
+        <li>Não toquem na água — é proibido por respeito às tradições locais.</li>
+        <li>Levem barrinhas, balas, água.</li>
+      </ul>
+
+      <h4>Fauna e flora</h4>
+      <p>Vocês vão ver vicuñas e alpacas pelo caminho. Aves: perdizes, gaivotas-andinas e patos selvagens. Pequenos mamíferos como <em>vizcachas</em> (parecidos com chinchilas grandes) podem aparecer entre as pedras. Plantas: <em>ichu</em> (gramínea típica), <em>queñua</em> (única árvore que cresce em altitudes tão extremas), <em>muña</em> (hortelã andina, usada em chá para altitude).</p>
+    </div>
+  </div>
+
+  <!-- 7 CORES -->
+  <div class="place-card">
+    <div class="place-hero" style="background-image: url('https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?w=1600&q=80');">
+      <div class="place-hero-label">Vinicunca · Montanha das 7 Cores</div>
+    </div>
+    <div class="place-body">
+      <h2 class="place-name">Montanha das 7 Cores</h2>
+      <p class="place-tagline"><em>Vinicunca</em> — a montanha listrada</p>
+
+      <div class="info-table">
+        <div class="info-row"><div class="info-key">Altitude</div><div>5.200m (mais alto que o roteiro inteiro!)</div></div>
+        <div class="info-row"><div class="info-key">Distância de Cusco</div><div>~150 km, 3h de carro</div></div>
+        <div class="info-row"><div class="info-key">Trekking</div><div>4 km ida e volta. Dificuldade: alta (por causa da altitude)</div></div>
+        <div class="info-row"><div class="info-key">Tempo total</div><div>~12h</div></div>
+        <div class="info-row"><div class="info-key">Clima em julho</div><div>Ensolarado mas MUITO frio. Pode estar bem abaixo de zero, neve no chão. Vento forte</div></div>
+      </div>
+
+      <p>Vinicunca, ou Montanha Arco-Íris, é uma formação rochosa com listras de cores naturais — <strong>vermelho</strong> (óxido de ferro), <strong>amarelo</strong> (enxofre), <strong>verde</strong> (clorito), <strong>branco</strong> (calcário), e outras nuances. Foi "descoberta" pelo turismo apenas em 2015, quando o degelo das geleiras revelou as cores antes cobertas pelo gelo. Antes disso, era ponto sagrado de peregrinação dos povos quechuas.</p>
+
+      <h4>Como é o passeio</h4>
+      <p>Saída de Cusco às 4h da manhã (algumas agências oferecem saída às 7h, com a vantagem de menos gente no local — vale considerar). Café da manhã em Cusipata. Chegada na base da trilha (~4.600m). Caminhada de 1h30 a 2h subindo até o mirante a 5.200m. Tempo no topo: ~30 min para fotos. Descida e retorno a Cusco no fim da tarde.</p>
+
+      <div class="callout">
+        <span class="callout-label">⚠ A trilha mais dura do roteiro</span>
+        <p>A altitude é brutal. Mesmo aclimatadas, vocês vão sentir muito o esforço. <strong>Tenham um dia de descanso entre a Humantay e essa.</strong> Vão no seu ritmo. Parem. Respirem. Levem seu tempo. Cavalos disponíveis para alugar (~S/80-100 no caminho).</p>
+      </div>
+
+      <h4>Alternativa menos lotada</h4>
+      <p>Existe uma alternativa muito menos cheia e tão linda quanto: <strong>Palccoyo</strong> (Mini Montanha das 7 Cores), com altitude menor (4.900m) e trilha mais fácil (30-45 min). Se a Vinicunca parecer dura demais, considerem.</p>
+
+      <h4>Fauna e flora</h4>
+      <p>Vão ver muitas <strong>alpacas e lhamas</strong> pelo caminho — algumas posando para foto (cobram). Vicuñas selvagens aparecem com sorte. Pássaros andinos, e em alguns trechos, condores no alto. Vegetação: gramínea baixa adaptada à altitude extrema, e quase nenhuma árvore.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ===== VI. CULINÁRIA ===== -->
+<section id="culinaria">
+  <div class="section-num">Capítulo VI</div>
+  <h2 class="section-title">Culinária <em>peruana</em></h2>
+  <p class="section-intro">Esta talvez seja uma das melhores partes da viagem. A culinária peruana é considerada a melhor da América do Sul — herança riquíssima das culturas pré-incas, espanhola, africana, chinesa e japonesa.</p>
+
+  <h3>Em Lima — cozinha costeira</h3>
+  <div class="dish-grid">
+    <div class="dish-card">
+      <div class="dish-name">Ceviche</div>
+      <p>O prato nacional. Peixe cru cortado em cubos, marinado em limão, com cebola roxa, ají, coentro, milho, batata-doce. Coma em uma cevicheria de verdade, no almoço.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Tiradito</div>
+      <p>Primo do ceviche, com peixe em fatias finas (estilo sashimi), molho de leche de tigre. Influência japonesa.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Causa Limeña</div>
+      <p>Purê de batata amarela com limão e ají, recheado com frango, atum ou polvo. Frio, lindo, delicioso.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Anticucho</div>
+      <p>Espetinho de coração de boi marinado em ají panca. Comida de rua clássica, segura e deliciosa. Procurem barracas com fila.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Arroz con Mariscos</div>
+      <p>Primo do paella, com frutos do mar peruanos. Conforto absoluto.</p>
+    </div>
+  </div>
+
+  <h3>Em Cusco e na Sierra — cozinha andina</h3>
+  <div class="dish-grid">
+    <div class="dish-card">
+      <div class="dish-name">Lomo Saltado</div>
+      <p>Carne salteada com cebola, tomate, ají amarelo, servida com batata frita E arroz. Influência chinesa (chifa).</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Ají de Gallina</div>
+      <p>Frango desfiado em creme amarelo de ají com pão, leite e queijo. Confortante, cremoso.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Cuy</div>
+      <p>Porquinho-da-índia. Prato cerimonial andino, comido inteiro, geralmente assado. Vale provar pela experiência cultural.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Alpaca</div>
+      <p>Carne magra, suave, sem gordura. Excelente em bifes. Alguns restaurantes preparam com molho de coca.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Trucha</div>
+      <p>Truta, comum no Vale Sagrado, peixe de rio andino. Deliciosa grelhada.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Sopa de Quinua</div>
+      <p>Perfeita nas noites frias dos Andes. Ajuda na altitude. Reconfortante.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Chicharrón</div>
+      <p>Pedaços de porco fritos, crocantes, servidos com mote (milho gigante).</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Pachamanca</div>
+      <p>Tradicional cozimento andino — carnes e tubérculos enterrados com pedras quentes. Se encontrarem, provem.</p>
+    </div>
+  </div>
+
+  <h3>Sobremesas e bebidas</h3>
+  <div class="dish-grid">
+    <div class="dish-card">
+      <div class="dish-name">Suspiro a la Limeña</div>
+      <p>Doce de leite com merengue. Cremoso, delicado, indulgente.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Picarones</div>
+      <p>Donuts de batata-doce e abóbora com calda de chancaca. Comida de rua.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Pisco Sour</div>
+      <p>Drink nacional. Pisco com limão, açúcar, clara de ovo e angostura. CUIDADO em altitude — bebam pouco em Cusco.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Chicha Morada</div>
+      <p>Suco roxo de milho roxo com abacaxi, canela, cravo. Sem álcool. Refrescante e lindíssimo.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Mate de Coca</div>
+      <p>O chá da altitude. Tomem o tempo todo. De graça em quase todos os hotéis.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-name">Inca Kola</div>
+      <p>Refrigerante amarelo, sabor "cremosinho". É o refrigerante nacional, mais vendido que Coca-Cola.</p>
+    </div>
+  </div>
+
+  <h3>Restaurantes recomendados</h3>
+
+  <h4>Em Lima</h4>
+  <ul class="fancy">
+    <li><strong>Maido</strong> — cozinha nikkei (peruana-japonesa). Top 10 do mundo. Caro mas memorável.</li>
+    <li><strong>Central</strong> — Top 1 do mundo em 2023. Reserva com MESES de antecedência.</li>
+    <li><strong>Astrid y Gastón</strong> — clássico contemporâneo de Gastón Acurio.</li>
+    <li><strong>Isolina (Barranco)</strong> — taberna familiar, comida tradicional, porções gigantes.</li>
+    <li><strong>La Mar</strong> — cevichería excepcional, ambiente animado.</li>
+    <li><strong>Canta Rana (Barranco)</strong> — cevichería tradicional e barata, ótima.</li>
+  </ul>
+
+  <h4>Em Cusco</h4>
+  <ul class="fancy">
+    <li><strong>Cicciolina</strong> — tapas, pratos contemporâneos, ambiente lindo.</li>
+    <li><strong>MAP Café</strong> — dentro do Museu de Arte Pré-Colombiana, num pátio de vidro.</li>
+    <li><strong>Chicha</strong> — restaurante de Gastón Acurio em Cusco.</li>
+    <li><strong>Pachapapa (San Blas)</strong> — comida andina tradicional em pátio bonito.</li>
+    <li><strong>Greens Organic</strong> — opção vegana/vegetariana ótima.</li>
+    <li><strong>Mercado de San Pedro</strong> — para sucos, sopas, almoços baratos e autênticos.</li>
+  </ul>
+
+  <div class="callout green">
+    <span class="callout-label">★ Dica gastronômica de ouro</span>
+    <p>Em Lima, almocem no <strong>"menú del día"</strong> — quase todo restaurante (até os bons) oferece um menu fixo no almoço por R$30-50, com entrada, prato principal, sobremesa e suco. É uma forma de comer muito bem por preço acessível. Em Cusco, evitem restaurantes diretamente na Plaza de Armas (turísticos e caros) — andem 2 quadras para qualquer lado.</p>
+  </div>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ===== VII. CUIDADOS ===== -->
+<section id="cuidados">
+  <div class="section-num">Capítulo VII</div>
+  <h2 class="section-title">Cuidados &amp; <em>perrengues</em></h2>
+  <p class="section-intro">O Peru é, em geral, seguro para turistas — mas como em qualquer país, com cuidados básicos vocês evitam dores de cabeça desnecessárias.</p>
+
+  <h3>Segurança</h3>
+  <ul class="fancy">
+    <li>Lima tem bairros bem diferentes em segurança. Hospedem-se em <strong>Miraflores, Barranco ou San Isidro</strong>. Evitem Centro Histórico à noite.</li>
+    <li>Cusco é segura para caminhadas mesmo à noite, especialmente nas áreas turísticas, mas tenham bom senso.</li>
+    <li>Não usem celular ostensivamente na rua. Não exibam câmera profissional. Não usem joias caras.</li>
+    <li>Mochila sempre na frente do corpo em locais cheios.</li>
+    <li>Cuidado com furto em mercados, transporte público e Plaza de Armas (Cusco).</li>
+    <li>Usem cofre do hotel para passaporte e dinheiro extra.</li>
+    <li><strong>Táxi:</strong> NUNCA peçam na rua em Lima. Usem Uber, Cabify ou Beat. Em Cusco a rua é mais ok, mas confirmem o preço antes de entrar.</li>
+    <li>Mulheres viajando: vai dar tudo certo. Cusco e Vale Sagrado em particular são tranquilos. Bom senso e amizade entre vocês duas é a melhor proteção.</li>
+  </ul>
+
+  <h3>Saúde — cuidados específicos</h3>
+  <ul class="fancy">
+    <li><strong>Água:</strong> SÓ engarrafada. Nem para escovar os dentes. Cuidado com gelo em estabelecimentos pequenos.</li>
+    <li>Frutas e saladas: prefiram em restaurantes confiáveis. Frutas com casca (banana, laranja, manga) são sempre seguras.</li>
+    <li>Comida de rua: alguns são lendários (anticuchos, picarones), mas escolham barracas com fila e movimento.</li>
+    <li>Ceviche: peixe cru. Coma só em cevicherias bem-faladas, idealmente no almoço (mais fresco).</li>
+    <li>Diarréia leve: Floratil + soro + descanso. Se tiver febre ou diarréia com sangue: procurem médico.</li>
+    <li>Mal de altitude grave (vômitos persistentes, falta de ar mesmo parada, confusão mental): <strong>desçam IMEDIATAMENTE para Lima</strong> ou pelo menos para o Vale Sagrado. Procurem atendimento médico.</li>
+  </ul>
+
+  <h3>Perrengues comuns e como evitar</h3>
+
+  <h4>"Eu não consigo respirar"</h4>
+  <p>Normal nos primeiros 2 dias em Cusco. Vão devagar. Mate de coca. Hidratem. Pílula de soroche se a dor de cabeça for forte. Passa.</p>
+
+  <h4>"Bolha no pé no terceiro dia"</h4>
+  <p>É o erro clássico — bota nova, meias erradas, ou trilha sem preparo. Por isso: <strong>USEM a bota antes da viagem</strong>. Levem Compeed (curativo de bolha que se cola). Se notarem atrito, parem e ponham o curativo IMEDIATAMENTE — antes da bolha aparecer.</p>
+
+  <h4>"Perdemos o trem"</h4>
+  <p>Trem para Machu Picchu não tem graça nenhuma. Saiam do hotel com 1h de antecedência. Confirmem estação (Ollantaytambo, Poroy ou Hidroeléctrica).</p>
+
+  <h4>"O voo de Cusco atrasou e perdemos a conexão"</h4>
+  <p>Por isso comprem passagens com múltiplos destinos integradas. E <strong>nunca marquem voo internacional para sair de Lima no MESMO DIA do voo Cusco-Lima</strong> — sempre durmam uma noite em Lima na volta.</p>
+
+  <h4>"Estamos exaustas e ainda faltam 3 dias"</h4>
+  <p>Aceitem cancelar uma trilha ou um passeio. Nada vale arruinar o resto da viagem. Cusco tem ótimos cafés, museus e mercados para um dia de descanso ativo. Massagem em hotel-spa custa cerca de R$ 100.</p>
+
+  <h4>"Ele/Ela está vendendo X muito barato!"</h4>
+  <p>Cuidado com tours vendidos na rua. Sempre prefiram agência com escritório físico, avaliações no Google ou TripAdvisor, e se possível recomendação. <strong>Para Machu Picchu, NUNCA comprem ingressos com terceiros</strong> — só pelo site oficial.</p>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ===== VIII. VOCABULÁRIO ===== -->
+<section id="vocabulario">
+  <div class="section-num">Capítulo VIII</div>
+  <h2 class="section-title"><em>Vocabulario</em></h2>
+  <p class="section-intro">O Peru fala espanhol. Em áreas andinas, muita gente também fala quechua — e usar algumas palavras é uma forma linda de demonstrar respeito à cultura local.</p>
+
+  <h3>Espanhol — sobrevivência</h3>
+  <table class="vocab-table">
+    <thead>
+      <tr><th>Espanhol</th><th>Português</th><th>Quando usar</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="word">Hola / Buenos días</td><td>Olá / Bom dia</td><td class="ctx">Cumprimentar</td></tr>
+      <tr><td class="word">Por favor</td><td>Por favor</td><td class="ctx">Pedir algo</td></tr>
+      <tr><td class="word">Gracias / Muchas gracias</td><td>Obrigada / Muito obrigada</td><td class="ctx">Agradecer</td></tr>
+      <tr><td class="word">Disculpe / Perdón</td><td>Desculpe / Com licença</td><td class="ctx">Pedir licença</td></tr>
+      <tr><td class="word">¿Cuánto cuesta?</td><td>Quanto custa?</td><td class="ctx">Comprar/negociar</td></tr>
+      <tr><td class="word">Está muy caro</td><td>Está muito caro</td><td class="ctx">Negociar preço</td></tr>
+      <tr><td class="word">¿Puede hacerme un descuento?</td><td>Pode fazer desconto?</td><td class="ctx">Em mercados</td></tr>
+      <tr><td class="word">No, gracias</td><td>Não, obrigada</td><td class="ctx">Recusar vendedor</td></tr>
+      <tr><td class="word">¿Dónde está...?</td><td>Onde fica...?</td><td class="ctx">Pedir direção</td></tr>
+      <tr><td class="word">¿Habla portugués / inglés?</td><td>Fala português / inglês?</td><td class="ctx">Sempre útil</td></tr>
+      <tr><td class="word">No entiendo</td><td>Não entendo</td><td class="ctx">Clássico</td></tr>
+      <tr><td class="word">¿Me puede ayudar?</td><td>Pode me ajudar?</td><td class="ctx">Quando precisar</td></tr>
+      <tr><td class="word">La cuenta, por favor</td><td>A conta, por favor</td><td class="ctx">Restaurante</td></tr>
+      <tr><td class="word">Soy alérgica a...</td><td>Sou alérgica a...</td><td class="ctx">Importante!</td></tr>
+      <tr><td class="word">Sin picante, por favor</td><td>Sem pimenta, por favor</td><td class="ctx">Estômagos sensíveis</td></tr>
+      <tr><td class="word">Agua sin gas / con gas</td><td>Água sem gás / com gás</td><td class="ctx">Restaurante</td></tr>
+      <tr><td class="word">Necesito un médico</td><td>Preciso de um médico</td><td class="ctx">Emergência</td></tr>
+      <tr><td class="word">Me duele la cabeza</td><td>Tenho dor de cabeça</td><td class="ctx">Soroche</td></tr>
+      <tr><td class="word">¿A qué hora sale el tren?</td><td>Que horas sai o trem?</td><td class="ctx">Importante!</td></tr>
+      <tr><td class="word">¿Es seguro?</td><td>É seguro?</td><td class="ctx">Sempre vale perguntar</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Quechua — palavras de respeito</h3>
+  <p>Os locais ficam genuinamente felizes quando turistas usam palavras em quechua, especialmente em vilarejos do Vale Sagrado e Cusco.</p>
+  <table class="vocab-table">
+    <thead>
+      <tr><th>Quechua</th><th>Português</th><th>Quando usar</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="word">Allillanchu</td><td>Olá / Tudo bem?</td><td class="ctx">Cumprimento informal</td></tr>
+      <tr><td class="word">Allillanmi</td><td>Bem, obrigado</td><td class="ctx">Resposta a allillanchu</td></tr>
+      <tr><td class="word">Sulpayki</td><td>Obrigado</td><td class="ctx">Agradecer (uso comum)</td></tr>
+      <tr><td class="word">Añay</td><td>Obrigada (mais coloquial)</td><td class="ctx">Em situações informais</td></tr>
+      <tr><td class="word">Pachamama</td><td>Mãe Terra</td><td class="ctx">Conceito sagrado</td></tr>
+      <tr><td class="word">Inti</td><td>Sol</td><td class="ctx">Divindade principal inca</td></tr>
+      <tr><td class="word">Apu</td><td>Espírito das montanhas</td><td class="ctx">Termo de respeito</td></tr>
+      <tr><td class="word">Wasi</td><td>Casa</td><td class="ctx">Ouvirá em nomes</td></tr>
+      <tr><td class="word">Ñusta</td><td>Princesa inca</td><td class="ctx">Em explicações culturais</td></tr>
+      <tr><td class="word">Tawantinsuyu</td><td>Império Inca</td><td class="ctx">Historicamente</td></tr>
+      <tr><td class="word">Qosqo</td><td>Cusco (umbigo)</td><td class="ctx">Pronúncia original</td></tr>
+      <tr><td class="word">Tupananchiskama</td><td>Até logo / nos vemos</td><td class="ctx">Despedida calorosa</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Termos peruanos de comida</h3>
+  <table class="vocab-table">
+    <thead>
+      <tr><th>Termo</th><th>Significado</th><th>Contexto</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="word">Ají</td><td>Pimenta peruana</td><td class="ctx">Tipos: amarillo, panca, rocoto</td></tr>
+      <tr><td class="word">Cuy</td><td>Porquinho-da-índia</td><td class="ctx">Comida tradicional andina</td></tr>
+      <tr><td class="word">Mote</td><td>Milho gigante cozido</td><td class="ctx">Acompanhamento típico</td></tr>
+      <tr><td class="word">Choclo</td><td>Milho fresco grande</td><td class="ctx">Tipo regional</td></tr>
+      <tr><td class="word">Papas nativas</td><td>Batatas nativas</td><td class="ctx">Mais de 3.000 variedades!</td></tr>
+      <tr><td class="word">Lúcuma</td><td>Fruta amarela cremosa</td><td class="ctx">Sabor único, prove sorvete</td></tr>
+      <tr><td class="word">Camote</td><td>Batata-doce</td><td class="ctx">Vem com ceviche</td></tr>
+      <tr><td class="word">Chifa</td><td>Cozinha sino-peruana</td><td class="ctx">Restaurantes chineses</td></tr>
+      <tr><td class="word">Nikkei</td><td>Cozinha nipo-peruana</td><td class="ctx">Influência japonesa</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ===== IX. EXTRAS ===== -->
+<section id="extras">
+  <div class="section-num">Capítulo IX</div>
+  <h2 class="section-title">Lugares <em>extras</em></h2>
+  <p class="section-intro">Algumas opções para considerar caso queiram trocar algo do roteiro ou estiquem mais a viagem.</p>
+
+  <h3>Perto de Cusco</h3>
+
+  <h4>Palccoyo — Mini Montanha das 7 Cores</h4>
+  <p>Alternativa MUITO menos lotada e menos exigente que Vinicunca. Altitude 4.900m (300m mais baixo), trilha de apenas 30-45 min. Tem três montanhas coloridas, uma "floresta" de pedras e vistas espetaculares. <strong>Vale considerar trocar Vinicunca por Palccoyo</strong> se quiserem uma experiência menos exaustiva.</p>
+
+  <h4>Águas Termais de Lares</h4>
+  <p>Banhos termais em meio às montanhas. Combinação perfeita após a Humantay ou a 7 Cores.</p>
+
+  <h4>Tipón</h4>
+  <p>Sítio inca a 30 min de Cusco, conhecido pelo sistema de canais e fontes de água ainda funcionando. Pouco visitado, lindo. Perto fica o povoado famoso por seu cuy assado.</p>
+
+  <h3>Mais distante (precisa de mais dias)</h3>
+
+  <h4>Lago Titicaca e Puno</h4>
+  <p>Lago navegável mais alto do mundo (3.812m). <strong>Ilhas flutuantes dos Uros</strong>, Ilha Taquile com tradições têxteis vivas. Acesso de Cusco em ônibus de 7-10h ou voo até Juliaca. Vale 2-3 dias.</p>
+
+  <h4>Arequipa e Cañon del Colca</h4>
+  <p>"Cidade Branca", uma das mais bonitas do Peru. Vulcões ao redor. O Colca tem 3.500m de profundidade e é o lar dos <strong>condores</strong>. Programa de 3-4 dias.</p>
+
+  <h4>Selva — Iquitos ou Puerto Maldonado</h4>
+  <p>Para quem quer experiência amazônica. Iquitos não tem acesso por estrada (só de avião ou barco). Puerto Maldonado fica perto de Cusco. Mínimo 3 dias.</p>
+
+  <h4>Trilha Inca de 4 dias até Machu Picchu</h4>
+  <p>Para futuras viagens! É a forma original de chegar à cidadela, atravessando passos de altitude e ruínas no caminho. Reserva precisa ser feita 6+ meses antes. Existe também a Salkantay Trek (5 dias) como alternativa.</p>
+
+  <h4>Trilha Choquequirao</h4>
+  <p>As "irmãs" de Machu Picchu — ruínas remotas, igualmente impressionantes, com 1% dos visitantes. Trilha de 4 dias. Para aventureiras.</p>
+</section>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ===== X. CHECKLISTS ===== -->
+<section id="checklists">
+  <div class="section-num">Capítulo X · Final</div>
+  <h2 class="section-title">Checklists <em>finais</em></h2>
+  <p class="section-intro">Para imprimir, marcar e saber que nada foi esquecido.</p>
+
+  <h3>Antes de viajar (60 dias antes)</h3>
+  <ul class="checklist">
+    <li>Comprar passagens internacionais (múltiplos destinos)</li>
+    <li>Comprar passagens internas Lima-Cusco-Lima</li>
+    <li>Reservar hotéis em Lima, Cusco e Aguas Calientes</li>
+    <li>Comprar ingresso de Machu Picchu (tuboleto.cultura.pe)</li>
+    <li>Comprar passagens de trem (Inca Rail ou Peru Rail)</li>
+    <li>Contratar seguro viagem com cobertura para esportes</li>
+    <li>Verificar validade do passaporte (mínimo 6 meses)</li>
+    <li>Atualizar carteira de vacinação</li>
+    <li>Marcar consulta com médico — pedir Diamox e remédios</li>
+    <li>Comprar bota de trilha e usar várias vezes</li>
+    <li>Começar a se preparar fisicamente (caminhadas, escadas)</li>
+  </ul>
+
+  <h3>1 semana antes</h3>
+  <ul class="checklist">
+    <li>Começar a tomar Floratil (probiótico)</li>
+    <li>Trocar dinheiro (dólares) ou colocar saldo no Wise/Nomad</li>
+    <li>Baixar mapas offline (Google Maps)</li>
+    <li>Comprar chip internacional ou eSIM</li>
+    <li>Imprimir TODAS as reservas</li>
+    <li>Tirar foto de tudo e salvar na nuvem</li>
+    <li>Compartilhar itinerário com a família</li>
+    <li>Confirmar reservas (Machu Picchu e trem)</li>
+    <li>Fazer mala de mão com o essencial</li>
+  </ul>
+
+  <h3>Na bagagem de mão (essencial)</h3>
+  <ul class="checklist">
+    <li>Passaporte e RG</li>
+    <li>Cartões e dinheiro</li>
+    <li>Celular e carregador</li>
+    <li>Carregador portátil</li>
+    <li>Adaptador universal</li>
+    <li>Medicamentos (Diamox, analgésicos, soro, Floratil)</li>
+    <li>Uma muda de roupa quente</li>
+    <li>Garrafa de água vazia</li>
+    <li>Lanches</li>
+    <li>Lip balm e hidratante</li>
+  </ul>
+
+  <h3>No dia das trilhas (Humantay e 7 Cores)</h3>
+  <ul class="checklist">
+    <li>Mochila pronta na noite anterior</li>
+    <li>Café da manhã reforçado</li>
+    <li>Roupa em camadas + jaqueta corta-vento</li>
+    <li>Bota de trilha (não tênis!)</li>
+    <li>Touca, luvas, óculos de sol, protetor solar</li>
+    <li>Garrafa de 1L de água</li>
+    <li>Barras de cereais + balas + chocolate</li>
+    <li>Soroche pills + paracetamol</li>
+    <li>Capa de chuva</li>
+    <li>Câmera ou celular bem carregado</li>
+    <li>Dinheiro em soles</li>
+    <li>Papel higiênico e álcool em gel</li>
+  </ul>
+</section>
+
+</main>
+
+<!-- ===== ENCERRAMENTO ===== -->
+<div class="closing">
+  <div class="closing-glyph">☀</div>
+  <p></p>Pachamama recebe quem chega com humildade.</p>
+  <div class="closing-quechua">— Tupananchiskama, Perú —</div>
+</div>
+
+<script>
+  // Barra de progresso de scroll
+  window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progress").style.width = scrolled + "%";
+  });
+</script>
+
+</body>
+</html>
